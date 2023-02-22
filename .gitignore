@@ -1,0 +1,11 @@
+!nodemon.json
+!README.md
+!tsconfig.json
+
+index.d.ts
+index.js
+
+*/*
+!src/**
+
+.turbo
