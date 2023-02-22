@@ -1,4 +1,3 @@
-import { escape } from "querystring";
 import type { BeemClient } from "../backend";
 import { ClientError } from "../backend/exception";
 import { normalizePhoneNumber, phoneRegex } from "../utils/phone";
@@ -6,11 +5,7 @@ import * as z from "zod";
 
 // cconfigurations
 const zConfig = z.object({
-	source: z.union([
-		z.literal("AUTHINFO"),
-		z.literal("INFO"),
-		z.literal("at.Biashara"),
-	]),
+	source: z.string(),
 	message: z.string(),
 	recipients: z
 		.array(z.string().regex(phoneRegex()).trim())
