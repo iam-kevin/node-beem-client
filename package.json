@@ -7,7 +7,7 @@
 	"scripts": {
 		"build": "tsc -p .",
 		"dev": "nodemon",
-		"preversion": "yarn build"
+		"preversion": "pn build"
 	},
 	"engineStrict": true,
 	"engines": {
